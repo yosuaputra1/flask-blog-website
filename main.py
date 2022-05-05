@@ -13,7 +13,7 @@ from flask_gravatar import Gravatar
 import os
 
 app = Flask(__name__)
-SECRET_KEY = os.environ.get('FLASK_BLOG_SECRET_KEY')
+SECRET_KEY = os.getenv('FLASK_BLOG_SECRET_KEY')
 app.config['SECRET_KEY'] = SECRET_KEY
 
 if not SECRET_KEY:
